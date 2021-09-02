@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-first-app": {
+    "masar-portal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-first-app",
+            "outputPath": "dist/masar-portal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,10 +30,18 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.rtl.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/@fortawesome/fontawesome-free/js/brands.js",
+              "node_modules/@fortawesome/fontawesome-free/js/solid.js",
+              "node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,10 +80,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-first-app:build:production"
+              "browserTarget": "masar-portal:build:production"
             },
             "development": {
-              "browserTarget": "my-first-app:build:development"
+              "browserTarget": "masar-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-first-app:build"
+            "browserTarget": "masar-portal:build"
           }
         },
         "test": {
@@ -106,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "my-first-app"
+  "defaultProject": "masar-portal"
 }

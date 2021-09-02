@@ -1,0 +1,48 @@
+<div class="col-12">
+  <h1 class="home-title">
+    خدمات منصة مسار
+  </h1>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="service-all-tab" data-bs-toggle="tab" data-bs-target="#service-all" type="button" role="tab" aria-controls="service-all" aria-selected="true">الكل</button>
+      <button class="nav-link" id="service-individual-tab" data-bs-toggle="tab" data-bs-target="#service-individual" type="button" role="tab" aria-controls="service-individual" aria-selected="false">افراد</button>
+      <button class="nav-link" id="service-gov-tab" data-bs-toggle="tab" data-bs-target="#service-gov" type="button" role="tab" aria-controls="service-gov" aria-selected="false">الجهات الحكومية</button>
+      <button class="nav-link" id="service-employee-tab" data-bs-toggle="tab" data-bs-target="#service-employee" type="button" role="tab" aria-controls="service-employee" aria-selected="false">الموظفين</button>
+    </div>
+  </nav>
+  <div class="tab-content bg-white" id="nav-tabContent">
+    <div class="tab-pane border-0 mt-0 px-0 fade show active" id="service-all" role="tabpanel" aria-labelledby="service-all-tab">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-sm-6 pb-4" *ngFor="let item of ServiceCard">
+          <app-service-card [title] = "item.CardTitle" [description] = "item.CardText"></app-service-card>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane border-0 mt-0 px-0 fade" id="service-individual" role="tabpanel" aria-labelledby="service-individual-tab">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-sm-6 pb-4" *ngFor="let item of ServiceCard">
+          <app-service-card [title] = "item.CardTitle" [description] = "item.CardText"></app-service-card>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane border-0 mt-0 px-0 fade" id="service-gov" role="tabpanel" aria-labelledby="service-gov-tab">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-sm-6 pb-4" *ngFor="let item of ServiceCard">
+          <app-service-card [title] = "item.CardTitle" [description] = "item.CardText"></app-service-card>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane border-0 px-0 fade" id="service-employee" role="tabpanel" aria-labelledby="service-employee-tab">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-sm-6 pb-4" *ngFor="let item of ServiceCard">
+          <app-service-card [title] = "item.CardTitle" [description] = "item.CardText"></app-service-card>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-12 text-center ">
+  <a href="#" class="link-dark text-decoration-none"> <i class="far fa-circle fs-7"></i> --- جميع الخدمات --- <i class="far fa-circle fs-7"></i>  </a>
+</div>

@@ -1,0 +1,51 @@
+<!-- Modal -->
+
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">تسجيل الدخول</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="username" class="form-label">رقم الهوية الوطنية</label>
+            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="username" placeholder="رقم الهوية الوطنية" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors?.required">ادخل رقم الهوية الوطنية</div>
+              <div *ngIf="f.username.errors?.pattern">yddd</div>
+              <div *ngIf="f.username.hasError('maxlength')">max</div>
+              <div *ngIf="f.username.hasError('minlength')">min</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">كلمة المرور</label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="password" placeholder="كلمة المرور" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">ادخل كلمة المرور</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  تذكرني
+                </label>
+              </div>
+            </div>
+            <div class="col-auto ms-auto">
+              <a href="#" class="link-primary">تسجيل مستخدم جديد؟</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
