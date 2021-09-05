@@ -1,3 +1,4 @@
+import { ContactUsComponent } from './_components/portal-internal/contact-us/contact-us.component';
 import { LoginComponent } from './_components/_layouts/_shared/login/login.component';
 import { PortalInternalComponent } from './_components/portal-internal/portal-internal/portal-internal.component';
 import { ServicesTabsComponent } from './_components/portal-home/portal-services/services-tabs/services-tabs.component';
@@ -28,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     NavbarHomeComponent,
     LoginComponent,
+    ContactUsComponent,
     ContentHomeComponent,
     NavbarInternalComponent,
     ContentInternalComponent,

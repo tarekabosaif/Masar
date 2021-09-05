@@ -1,3 +1,4 @@
+import { ContactUsComponent } from './_components/portal-internal/contact-us/contact-us.component';
 import { FaqInternalComponent } from './_components/portal-internal/faq-internal/faq-internal.component';
 import { ContentInternalComponent } from './_components/_layouts/internal/content-internal/content-internal.component';
 import { NavTabsComponent } from './_components/portal-home/nav-tabs/nav-tabs.component';
@@ -25,6 +26,7 @@ export const routes: Routes = [
     children:
     [
       { path: 'internal', component: PortalInternalComponent, data: { title: 'Internal' } },
+      { path: 'contact', component: ContactUsComponent, data: { title: 'Contact Us' } },
       { path: 'FAQ', component: FaqInternalComponent, data: { title: 'FAQ' } },
 
     ]

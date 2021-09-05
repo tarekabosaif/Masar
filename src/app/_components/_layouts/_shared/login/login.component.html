@@ -12,17 +12,17 @@
 
           <div class="mb-3">
             <label for="username" class="form-label">رقم الهوية الوطنية</label>
-            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="username" placeholder="رقم الهوية الوطنية" />
+            <input type="text" autocomplete="username" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="username" placeholder="رقم الهوية الوطنية" />
             <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
               <div *ngIf="f.username.errors?.required">ادخل رقم الهوية الوطنية</div>
-              <div *ngIf="f.username.errors?.pattern">yddd</div>
-              <div *ngIf="f.username.hasError('maxlength')">max</div>
-              <div *ngIf="f.username.hasError('minlength')">min</div>
+              <div *ngIf="f.username.errors?.pattern">برجاء ادخال ارقام فقط</div>
+              <div *ngIf="f.username.hasError('maxlength')">تخطيت الحد الاقصى لرقم الهوية</div>
+              <div *ngIf="f.username.hasError('minlength')">ادخل رقم الهوية كامل</div>
             </div>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">كلمة المرور</label>
-            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="password" placeholder="كلمة المرور" />
+            <input type="password" autocomplete="current-password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="password" placeholder="كلمة المرور" />
             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
               <div *ngIf="f.password.errors.required">ادخل كلمة المرور</div>
             </div>
